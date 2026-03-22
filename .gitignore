@@ -9,3 +9,12 @@ data/docs_selected.jsonl
 .mypy_cache/
 .venv
 logs/
+CLAUDE.md
+.claude/
+.gitnexus
+AGENTS.md
+# Competitor records removed locally (summarized in .claude/experiments.md)
+records/track_non_record_16mb/
+records/track_10min_16mb/2026-03-17_*
+records/track_10min_16mb/2026-03-18_*
+records/track_10min_16mb/2026-03-19_*
