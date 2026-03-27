@@ -1,0 +1,48 @@
+Traceback (most recent call last):
+  File "/home/hahuy/Documents/github/parameter-golf/records/track_10min_16mb/2026-03-23_P1_Int5_10L/train_gpt.py", line 1238, in <module>
+    main()
+    ~~~~^^
+  File "/home/hahuy/Documents/github/parameter-golf/records/track_10min_16mb/2026-03-23_P1_Int5_10L/train_gpt.py", line 858, in main
+    raise RuntimeError("CUDA is required")
+RuntimeError: CUDA is required
+E0323 02:15:14.803000 698674 torch/distributed/elastic/multiprocessing/api.py:984] failed (exitcode: 1) local_rank: 0 (pid: 698913) of binary: /usr/bin/python3
+Traceback (most recent call last):
+  File "/home/hahuy/.local/bin/torchrun", line 8, in <module>
+    sys.exit(main())
+             ~~~~^^
+  File "/home/hahuy/.local/lib/python3.14/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 362, in wrapper
+    return f(*args, **kwargs)
+  File "/home/hahuy/.local/lib/python3.14/site-packages/torch/distributed/run.py", line 991, in main
+    run(args)
+    ~~~^^^^^^
+  File "/home/hahuy/.local/lib/python3.14/site-packages/torch/distributed/run.py", line 982, in run
+    elastic_launch(
+    ~~~~~~~~~~~~~~~
+        config=config,
+        ~~~~~~~~~~~~~~
+        entrypoint=cmd,
+        ~~~~~~~~~~~~~~~
+    )(*cmd_args)
+    ~^^^^^^^^^^^
+  File "/home/hahuy/.local/lib/python3.14/site-packages/torch/distributed/launcher/api.py", line 170, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+  File "/home/hahuy/.local/lib/python3.14/site-packages/torch/distributed/launcher/api.py", line 317, in launch_agent
+    raise ChildFailedError(
+    ...<2 lines>...
+    )
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+train_gpt.py FAILED
+------------------------------------------------------------
+Failures:
+  <NO_OTHER_FAILURES>
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2026-03-23_02:15:14
+  host      : fedora
+  rank      : 0 (local_rank: 0)
+  exitcode  : 1 (pid: 698913)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================
